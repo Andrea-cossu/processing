@@ -23,7 +23,24 @@
                 rotate(radians(frameCount * 2  % 360));
                 rect(0, 0, 80, 5);
                 popMatrix();
-            }
+            }void setup() {
+  size(200, 200);
+  background(241, 241, 128);
+  smooth();
+  noStroke();
+}
+
+void draw(){
+  if (frameCount % 2 == 0) {
+    fill(frameCount * 70 % 255, frameCount * 70 % 255,
+      frameCount * 90 % 255);
+    pushMatrix();
+    translate(100, 100);
+    rotate(radians(frameCount * 3  % 360));
+    rect(0, 0, 50, 40);
+    popMatrix();
+  }
+}
             
         </script>
         <canvas></canvas>
